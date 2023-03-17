@@ -1,0 +1,133 @@
+#Ejercicio 1
+ptr1=[3,2,3,4,9]
+ptr2=[3,7,4,9,10]
+l = len(ptr1)
+
+for y in range(0,4):
+  c = ptr1.count(ptr2[y])
+  for x in range(0,c):
+    ptr1.remove(ptr2[y])
+print(ptr1,ptr2)
+print('\n\n')
+
+#Ejercicio 2
+import random
+
+
+aleatorios = [random.randint(0,10000) for _ in range(20)]
+print(aleatorios)
+print('\n')
+for x in range(0,20):
+    for y in range(x+1,20):
+        c='si'
+        if aleatorios[x]==aleatorios[y] and c=='si':
+            print(aleatorios[x])
+            c='no'
+            
+print('\n\n') 
+#Ejercicio 3
+ptr1 = [2, 5, 6, 7, 8, 3]
+ptrl = []
+l = len(ptr1)
+
+for x in range(0,l):
+  ptrl.insert (0,ptr1[x])
+  
+print(ptrl)
+
+print('\n\n') 
+#Ejercicio 5
+import random
+
+lis = [] # Lista inicial
+for x in range(20):
+    lis.append(random.randint(x,pow(x,2))%10)
+    
+rep = [] # Lista de elementos no repetidos
+for x in lis:
+    if(rep.count(x) == 0):
+        rep.append(x)
+rep.sort()
+
+count = [] # Lista contadora
+for x in rep:     
+    count.append(lis.count(x))
+
+print(lis)
+print(rep)
+print(count)
+
+
+print('\n\n') 
+#Ejercicio 6
+import random
+
+lis = [] # Lista inicial
+for x in range(10):
+    lis.append(random.randint(-pow(x,2),pow(x,2)))
+    
+pos = []
+neg = []    
+for x in lis:
+    if(x>0):
+        pos.append(x)
+        continue
+    if(x<0):
+        neg.append(x)
+        continue
+    
+print(lis)
+print(pos)
+print(neg)
+print('\n\n')
+#Ejercicio 7
+import random
+
+lis1 = [] # Lista inicial 1
+lis2 = [] # Lista inicial 2
+for x in range(10):
+    lis1.append(random.randint(-pow(x,2),pow(x,2)))
+    lis2.append(random.randint(-pow(x,2),pow(x,2)))
+lis1.sort()
+lis2.sort()
+
+sim = [] #Lista de similitudes
+for x in lis1:
+    if(lis2.count(x) > 0 & sim.count(x) == 0):
+        sim.append(x)
+sim.sort()
+sim.reverse()
+
+
+print(lis1)
+print(lis2)
+print(sim)  
+print('\n\n')      
+#Ejercicio 8
+import random
+
+
+lista = [random.randint(0,100) for _ in range(10)]
+print(lista)
+print('\n')
+
+print("Digite el k-enesimo numero de la lista que desea eliminar (Tenga en cuenta las posiciones empiezan desde 0):")
+k=int(input())
+c=lista[k]
+
+lista.remove(c)
+print(lista)
+print('\n\n') 
+
+#Ejercicio 9
+lista1=[random.randint(0,10) for _ in range(5)]
+lista2=[random.randint(0,10) for _ in range(5)]
+lista1.sort()
+lista2.sort()
+print(lista1)
+print('\n')
+print(lista2)
+if lista1==lista2:
+         print("son iguales")
+else :
+         print("son distintas")
