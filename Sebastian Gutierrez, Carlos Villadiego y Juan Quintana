@@ -36,6 +36,28 @@ for x in range(0,l):
 print(ptrl)
 
 print('\n\n') 
+#Ejercicio 4
+import random
+lista11=[random.randint(-10,10) for _ in range(5)]
+
+i = 0 
+while i < len(lista11):
+    if lista11[i] < 0:
+        lista11.insert(i, -1000)
+        i += 1  
+    elif lista11[i] > 0:
+        lista11.insert(i + 1, 1000)
+        i += 1  
+    elif lista11[i] == 0:
+        del lista11[i]
+        i+1
+    i += 1
+        
+print(lista11)
+                   
+                        
+    
+print('\n\n')
 #Ejercicio 5
 import random
 
@@ -131,3 +153,5 @@ if lista1==lista2:
          print("son iguales")
 else :
          print("son distintas")
+print('\n\n')
+
